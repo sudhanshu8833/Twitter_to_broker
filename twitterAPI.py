@@ -7,15 +7,17 @@ import telepot
 import requests
 import json
 import pandas as pd
-bot = telepot.Bot('1998607437:AAGdLpK6YKr9AQgKbr-gBvyX9cD62bEe1EE')
+bot = telepot.Bot('')
 bot.getMe()
 import time
 
-API_KEY= "WrFxm3ofgDczHQN4YPMTv6nSc"
-API_SECRET_KEY="hZHU60tQXOwl5wXWWjBwBiKkkdBee9RxyJB53pFVMz0RYf0A0s"
-BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAAN36TAEAAAAAF8D%2B%2FTmgRDitCRNSRP6JEYAMspU%3DRHZVjZsfcoAJMMmqfjRXBEfZbugrzrlA2A2tt7Hnva7whgqpbM"
-ACCESS_TOKEN='768195544904720384-W2VycRQYajyeKU1FuLJtZhb2Rya1d68'
-ACCESS_SECRET_TOKEN='3xfyr03bUJan8eembYN9vsDXhD01OvHfUT5WKrMp1xGOq'
+
+# twitter API INFORMATION
+API_KEY= ""
+API_SECRET_KEY=""
+BEARER_TOKEN=""
+ACCESS_TOKEN=''
+ACCESS_SECRET_TOKEN=''
 df3 = pd.read_csv("parameters.csv")
 df3.set_index("parameters",inplace=True)
 df1=df3.T
@@ -201,7 +203,7 @@ def market_order(twee):
             strike_price=int(value)
         quantity=int(position/price)
         order()
-        bot.sendMessage(1039725953,f'Limit Bought stock={stock} put quantity = {position} strike_price = {strike_price} ltp = {price}')
+
 
 
 twee='there are no tweets from this twitter handle'

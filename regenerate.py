@@ -8,7 +8,7 @@ import json
 
 
 # %%
-api_key='I4PKRLHB6SMVSYGUIJYCTAZ9MRQOIKSV'
+api_key=''
 with open("refresh.json") as json_data_file:
     data2 = json.load(json_data_file)
 refresh_token=data2['refresh_token']
